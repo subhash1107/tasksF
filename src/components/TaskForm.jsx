@@ -17,7 +17,7 @@ const TaskForm = ({ onSubmit }) => {
     <form onSubmit={handleSubmit}>
         <div className="flex gap-3 w-full justify-between mb-2">
       <input
-      className='px-4 py-2 rounded-md border w-[73%] bg-white'
+      className='px-4 py-2 rounded-md border w-[68%] md:w-[73%] bg-white'
       type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}

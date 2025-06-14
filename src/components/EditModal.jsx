@@ -18,7 +18,7 @@ const EditModal = ({
 
   return createPortal(
     <div
-      className="fixed inset-0 backdrop-blur-sm backdrop-brightness-50 flex justify-center items-center z-50"
+      className="fixed inset-0 backdrop-blur-sm backdrop-brightness-50 flex justify-center p-6 items-center z-50"
       onClick={onClose}
     >
       <div

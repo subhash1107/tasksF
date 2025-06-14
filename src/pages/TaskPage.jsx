@@ -50,8 +50,8 @@ const TaskPage = () => {
   };
 
   return (
-    <div className="min-h-screen -mt-20 justify-center items-center flex flex-col">
-      <div className="bg-amber-50 p-8 rounded-lg shadow-md w-full max-w-md">
+    <div className="min-h-screen justify-center items-center flex flex-col">
+      <div className="bg-gray-50 p-8 rounded-lg shadow-md w-full max-w-md max-h-[90vh] overflow-auto">
         <h1 className="mb-6 font-bold text-2xl">Add New Task</h1>
         <TaskForm onSubmit={handleCreateOrUpdate} editingTask={editingTask} />
         <TaskList

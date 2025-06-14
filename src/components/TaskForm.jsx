@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState} from "react";
 import Button from "./Button";
 
-const TaskForm = ({ onSubmit, editingTask }) => {
+const TaskForm = ({ onSubmit }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-   
-  useEffect(() => {
-    if (editingTask) {
-      setName(editingTask.name);
-      setDescription(editingTask.description);
-    }
-  }, [editingTask]);
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,7 +23,7 @@ const TaskForm = ({ onSubmit, editingTask }) => {
         onChange={(e) => setName(e.target.value)}
         placeholder="Task Name"
       />
-      <Button className='px-3 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 ' type="submit">{editingTask ? "Update" : "Add"} Task</Button>
+      <Button className='px-3 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-500 ' type="submit">Add Task</Button>
       </div>
       <input
       className='px-4 py-2 rounded-md border w-full mb-2 bg-white'

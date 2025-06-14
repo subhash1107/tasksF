@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Button from "./Button";
 
 const TaskForm = ({ onSubmit, editingTask }) => {
   const [name, setName] = useState("");
@@ -23,7 +24,7 @@ const TaskForm = ({ onSubmit, editingTask }) => {
     <form onSubmit={handleSubmit}>
       <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Task Name" />
       <input value={description} onChange={(e) => setDescription(e.target.value)} placeholder="Description" />
-      <button type="submit">{editingTask ? "Update" : "Add"} Task</button>
+      <Button type="submit">{editingTask ? "Update" : "Add"} Task</Button>
     </form>
   );
 };

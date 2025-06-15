@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const TaskList = ({ tasks, onEdit, onDelete }) => (
   <div className="mt-4 h-full">
-    <h1 className="mb-6 font-bold text-2xl">Task List</h1>
+    {tasks.length>0&&<h1 className="mb-6 font-bold text-2xl">Task List</h1>}
     <ul>
       {tasks.map((task) => (
         <li key={task.id} className="">
